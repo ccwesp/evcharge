@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EVCharge 隱私權政策</title>
+<style>
+  :root {
+    --ink: #1f2420;
+    --muted: #6b7169;
+    --chalk: #f4f2ec;
+    --paper: #fffefa;
+    --green: #1f5c3d;
+    --line: #d9d6cc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e8e6df;
+      --muted: #9a9c94;
+      --chalk: #161916;
+      --paper: #1e211d;
+      --green: #6fbf8f;
+      --line: #333733;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--chalk);
+    color: var(--ink);
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+          "PingFang TC", "Noto Sans TC", sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  header {
+    border-bottom: 3px double var(--line);
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--green);
+    color: #fffefa;
+    font-size: .72rem;
+    letter-spacing: .18em;
+    padding: .28rem .7rem;
+    border-radius: 3px;
+    margin-bottom: .9rem;
+  }
+  @media (prefers-color-scheme: dark) { .badge { color: #161916; } }
+  h1 { font-size: 1.7rem; margin: 0 0 .4rem; letter-spacing: .02em; }
+  .updated { color: var(--muted); font-size: .85rem; margin: 0; }
+  h2 {
+    font-size: 1.12rem;
+    margin: 2.4rem 0 .7rem;
+    padding-left: .6rem;
+    border-left: 4px solid var(--green);
+  }
+  p, li { color: var(--ink); }
+  strong { font-weight: 600; }
+  ol, ul { padding-left: 1.4rem; }
+  li { margin: .35rem 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: .93rem;
+    background: var(--paper);
+  }
+  th, td { border: 1px solid var(--line); padding: .55rem .7rem; text-align: left; }
+  th { background: rgba(31,92,61,.08); font-weight: 600; }
+  .note {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1rem 1.1rem;
+    margin: 1.2rem 0;
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .85rem;
+  }
+  a { color: var(--green); }
+  .table-scroll { overflow-x: auto; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="badge">EVCHARGE · 公路旅誌</span>
+  <h1>隱私權政策</h1>
+  <p class="updated">最後更新：2026 年 7 月 26 日</p>
+</header>
+
+<h2>我們收集什麼</h2>
+<div class="note">
+  <p style="margin:0"><strong>不收集。</strong> EVCharge 沒有帳號系統，也沒有我們自己的伺服器。</p>
+</div>
+<p>你的車輛資料、充電記錄、開銷記錄、車況記錄、筆記與照片，全部儲存在你自己的裝置上。我們無法讀取，也沒有任何管道取得。</p>
+
+<h2>iCloud 同步</h2>
+<p>若你在 App 內開啟 iCloud 同步，資料會存放在<strong>你自己的 Apple iCloud 帳戶</strong>中，用於在你的裝置之間同步。這些資料由 Apple 依其隱私權政策保管，我們無法存取。</p>
+<p>關閉方式：EVCharge → 設定 → iCloud 同步。</p>
+
+<h2>選用的雲端 AI</h2>
+<p>EVCharge 的「問這台車」、月度旅誌、語音／拍照記帳解析可以使用 AI。AI 有三種來源，由你在「設定 → AI 輔助」決定：</p>
+<ol>
+  <li><strong>不啟用</strong>（預設）— 完全不連線，功能改用 App 內建的規則運算。</li>
+  <li><strong>裝置端 Apple Intelligence</strong> — 全程在你的 iPhone 上運算，不經網路。</li>
+  <li><strong>雲端 AI</strong> — 需要你<strong>自行填入</strong>服務商的 API 金鑰才會啟用。</li>
+</ol>
+<p>只有在第 3 種情況下，才會有資料離開你的裝置：</p>
+<ul>
+  <li>傳送對象：<strong>你自己選擇</strong>的服務商（Anthropic、OpenAI、Google Gemini、xAI、DeepSeek、OpenCode 等），並受該公司的隱私權政策約束。</li>
+  <li>傳送內容：你輸入的問題或語音轉出的文字，以及回答該問題所需的統計摘要（例如某段期間的充電度數與金額小計）。</li>
+  <li><strong>不會傳送</strong>：照片、GPS 座標、車牌號碼。</li>
+  <li>你的 API 金鑰儲存在裝置的 Keychain，只用於直接呼叫該服務商，不會傳送到任何其他地方，也不會進入備份檔。</li>
+</ul>
+<p>不啟用雲端 AI，就完全不會發生任何 AI 相關的網路連線。</p>
+
+<h2>其他外部連線</h2>
+<p>以下兩項與 AI 無關，即使未啟用 AI 也可能發生。兩者都不傳送任何個人資料：</p>
+<ul>
+  <li><strong>YouTube 影片縮圖</strong> — 當你在筆記中貼上 YouTube 連結時，App 會向 Google 請求該影片的縮圖。</li>
+  <li><strong>油價查詢</strong> — 開啟「燃油車比較」時，App 會向台灣中油查詢 95 無鉛汽油牌價。</li>
+</ul>
+
+<h2>權限用途</h2>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>權限</th><th>用途</th></tr></thead>
+  <tbody>
+    <tr><td>相機</td><td>拍攝發票、收據、充電樁結帳畫面，以及記錄照片</td></tr>
+    <tr><td>麥克風</td><td>語音記帳</td></tr>
+    <tr><td>語音辨識</td><td>將語音轉成文字（在裝置上處理）</td></tr>
+    <tr><td>定位</td><td>記錄充電或開銷發生的地點，僅在你主動按下取得位置時使用</td></tr>
+    <tr><td>照片圖庫</td><td>從相簿選擇要附加到記錄的照片</td></tr>
+  </tbody>
+</table>
+</div>
+<p>所有權限都只在你主動使用該功能時取用，結果只寫入你的本機記錄。</p>
+
+<h2>訂閱</h2>
+<p>「公路通行證」訂閱透過 Apple App Store 處理。付款資訊由 Apple 保管，我們看不到你的付款方式或身分。</p>
+
+<h2>兒童</h2>
+<p>EVCharge 不針對 13 歲以下兒童設計，也不會刻意收集兒童資料。</p>
+
+<h2>資料刪除</h2>
+<ul>
+  <li><strong>本機資料</strong>：刪除 App 即一併刪除。</li>
+  <li><strong>iCloud 資料</strong>：iPhone 設定 → 你的名字 → iCloud → 管理帳戶儲存空間 → EVCharge → 刪除資料。</li>
+  <li>App 內也提供「匯出備份」，你隨時可以把資料完整帶走。</li>
+</ul>
+
+<h2>政策變更</h2>
+<p>本頁面若有更新，會修改頁首的「最後更新」日期。</p>
+
+<h2>聯絡</h2>
+<p>有任何隱私相關問題，請來信：<a href="mailto:ccw.matt@gmail.com">ccw.matt@gmail.com</a></p>
+
+<footer>EVCharge · 公路旅誌　—　記錄這台車走過的每一段路</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EVCharge · 公路旅誌</title>
+<style>
+  :root {
+    --ink: #1f2420; --muted: #6b7169; --chalk: #f4f2ec;
+    --paper: #fffefa; --green: #1f5c3d; --line: #d9d6cc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e8e6df; --muted: #9a9c94; --chalk: #161916;
+      --paper: #1e211d; --green: #6fbf8f; --line: #333733;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--chalk); color: var(--ink);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+          "PingFang TC", "Noto Sans TC", sans-serif;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh; padding: 2rem 1.25rem;
+  }
+  .card { max-width: 34rem; width: 100%; text-align: center; }
+  .badge {
+    display: inline-block; background: var(--green); color: #fffefa;
+    font-size: .72rem; letter-spacing: .18em;
+    padding: .28rem .7rem; border-radius: 3px; margin-bottom: 1.1rem;
+  }
+  @media (prefers-color-scheme: dark) { .badge { color: #161916; } }
+  h1 { font-size: 1.9rem; margin: 0 0 .5rem; letter-spacing: .02em; }
+  .tagline { color: var(--muted); margin: 0 0 2rem; }
+  .links { display: flex; flex-direction: column; gap: .7rem; }
+  a.link {
+    display: block; background: var(--paper); border: 1px solid var(--line);
+    border-radius: 8px; padding: .9rem 1.1rem;
+    color: var(--ink); text-decoration: none; text-align: left;
+  }
+  a.link:hover { border-color: var(--green); }
+  a.link strong { display: block; }
+  a.link span { color: var(--muted); font-size: .85rem; }
+  footer { margin-top: 2.5rem; color: var(--muted); font-size: .82rem; }
+  footer a { color: var(--green); }
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="badge">EVCHARGE</span>
+  <h1>公路旅誌</h1>
+  <p class="tagline">記錄這台車走過的每一段路</p>
+  <div class="links">
+    <a class="link" href="privacy.html">
+      <strong>隱私權政策</strong>
+      <span>資料存在你的裝置上，我們沒有伺服器</span>
+    </a>
+  </div>
+  <footer>聯絡：<a href="mailto:ccw.matt@gmail.com">ccw.matt@gmail.com</a></footer>
+</div>
+</body>
+</html>

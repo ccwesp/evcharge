@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EVCharge 支援</title>
+<style>
+  :root {
+    --ink: #1f2420; --muted: #6b7169; --chalk: #f4f2ec;
+    --paper: #fffefa; --green: #1f5c3d; --line: #d9d6cc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e8e6df; --muted: #9a9c94; --chalk: #161916;
+      --paper: #1e211d; --green: #6fbf8f; --line: #333733;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--chalk); color: var(--ink);
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+          "PingFang TC", "Noto Sans TC", sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  header { border-bottom: 3px double var(--line); padding-bottom: 1.25rem; margin-bottom: 2rem; }
+  .badge {
+    display: inline-block; background: var(--green); color: #fffefa;
+    font-size: .72rem; letter-spacing: .18em;
+    padding: .28rem .7rem; border-radius: 3px; margin-bottom: .9rem;
+  }
+  @media (prefers-color-scheme: dark) { .badge { color: #161916; } }
+  h1 { font-size: 1.7rem; margin: 0 0 .4rem; letter-spacing: .02em; }
+  .lede { color: var(--muted); margin: 0; }
+  h2 {
+    font-size: 1.12rem; margin: 2.4rem 0 .7rem;
+    padding-left: .6rem; border-left: 4px solid var(--green);
+  }
+  h3 { font-size: 1rem; margin: 1.6rem 0 .3rem; }
+  ul, ol { padding-left: 1.4rem; }
+  li { margin: .35rem 0; }
+  .contact {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: 8px; padding: 1.1rem 1.2rem; margin: 1.2rem 0;
+  }
+  .contact p { margin: .3rem 0; }
+  a { color: var(--green); }
+  footer {
+    margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: .85rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="badge">EVCHARGE · 公路旅誌</span>
+  <h1>支援</h1>
+  <p class="lede">用不順、有想法、發現 bug，都歡迎直接來信。</p>
+</header>
+
+<div class="contact">
+  <p><strong>聯絡信箱</strong></p>
+  <p><a href="mailto:ccw.matt@gmail.com">ccw.matt@gmail.com</a></p>
+  <p style="color:var(--muted);font-size:.88rem;margin-top:.6rem">
+    回報問題時，附上你的 iPhone 機型、iOS 版本與 EVCharge 版本（設定 → 關於）會快很多。
+  </p>
+</div>
+
+<h2>常見問題</h2>
+
+<h3>資料會不會不見？</h3>
+<p>資料存在你自己的裝置上。開啟 iCloud 同步後會存進你自己的 iCloud 帳戶，換手機時會自動帶過去。另外設定 → 資料裡有「匯出備份」，會產生一個完整的 JSON 檔，你隨時可以自己留一份。</p>
+
+<h3>換手機怎麼把資料帶過去？</h3>
+<ul>
+  <li><strong>有開 iCloud 同步</strong>：新手機裝好 App、登入同一個 Apple 帳號，資料會自己回來。</li>
+  <li><strong>沒開</strong>：舊手機「匯出備份」，新手機「還原備份」。注意還原會覆蓋新手機上的現有資料。</li>
+</ul>
+
+<h3>「問這台車」問不到東西？</h3>
+<p>它只查你自己記過的資料，沒記過的就答不出來。另外它需要 AI 才能把答案講成白話——設定 → AI 輔助可以選裝置端的 Apple Intelligence，或填入自己的雲端 AI 金鑰。沒有 AI 也查得到，只是回答會是直接的資料摘要。</p>
+
+<h3>語音記帳認錯字？</h3>
+<p>場站與分類的名稱會自動加進語音辨識的詞彙表，記錄越多會越準。如果某個場站常被認錯，可以在設定 → 充電場站管理裡把名稱改成比較好念的寫法。認錯了也可以直接在表單上改，或重新錄一次——重錄會把整張表單清掉重填。</p>
+
+<h3>電池健康度（SOH）準嗎？</h3>
+<p>那是由充電記錄反推的**估算值**，不是車廠的實測數據，所以畫面上一律標示「推估值・僅供參考」並附上區間。記錄越多、充到高電量的次數越多，估得越穩。</p>
+
+<h3>訂閱、取消與退款</h3>
+<ul>
+  <li>首次使用起 14 天內所有功能免費。</li>
+  <li>訂閱管理與取消：iPhone 設定 → 你的名字 → 訂閱項目。取消後到期前仍可使用。</li>
+  <li>換過手機或重裝：設定 → 公路通行證 → 恢復購買。</li>
+  <li>退款由 Apple 處理，請至 <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>。</li>
+</ul>
+
+<h3>取消訂閱後資料會不會被鎖住？</h3>
+<p>不會。充電與開銷記帳、瀏覽記錄、提醒、備份與匯出永遠免費。訂閱鎖的是進階統計、語音記帳那類功能，你的資料永遠拿得回來。</p>
+
+<h2>隱私</h2>
+<p>完整說明請見 <a href="privacy.html">隱私權政策</a>。重點：沒有帳號系統、沒有我們自己的伺服器、資料預設只存在你的裝置上。</p>
+
+<footer>
+  EVCharge · 公路旅誌　—　記錄這台車走過的每一段路<br>
+  <a href="index.html">回首頁</a>
+</footer>
+</div>
+</body>
+</html>

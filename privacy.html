@@ -93,7 +93,7 @@
 <header>
   <span class="badge">EVCHARGE · 公路旅誌</span>
   <h1>隱私權政策</h1>
-  <p class="updated">最後更新：2026 年 7 月 26 日</p>
+  <p class="updated">最後更新：2026 年 8 月 21 日</p>
 </header>
 
 <h2>我們收集什麼</h2>
@@ -105,6 +105,15 @@
 <h2>iCloud 同步</h2>
 <p>若你在 App 內開啟 iCloud 同步，資料會存放在<strong>你自己的 Apple iCloud 帳戶</strong>中，用於在你的裝置之間同步。這些資料由 Apple 依其隱私權政策保管，我們無法存取。</p>
 <p>關閉方式：EVCharge → 設定 → iCloud 同步。</p>
+
+<h2>充電天氣</h2>
+<p>當你新增一筆<strong>當下</strong>的充電記錄時，EVCharge 會取得這台裝置的位置，並把該座標傳送給 <strong>Apple 的 WeatherKit 服務</strong>，取回當時的天氣狀況與氣溫存進那筆記錄。此請求由 Apple 依其隱私權政策處理，我們不會收到座標，也無法存取這些請求。</p>
+<ul>
+  <li>座標只用於查詢該地點的天氣，不會傳送給 EVCharge 開發者或任何第三方廠商。</li>
+  <li>補登較早的記錄時<strong>不會</strong>查詢天氣（距離現在超過 6 小時就不查），避免拿今天的天氣冒充當時的天氣。</li>
+  <li>你未授權定位、裝置無法連線或查詢失敗時，天氣欄位留空，你仍可自行從清單選擇，不影響儲存。</li>
+  <li>天氣與氣溫存在該筆充電記錄裡，跟其他記錄一樣：開啟 iCloud 同步就會一併同步，也會包含在你匯出的備份檔中。</li>
+</ul>
 
 <h2>選用的雲端 AI</h2>
 <p>EVCharge 的「問這台車」、月度旅誌、語音／拍照記帳解析可以使用 AI。處理方式由你在「設定 → AI 輔助」決定：</p>
@@ -122,6 +131,17 @@
 </ul>
 <p>你可在「設定 → AI 輔助」按下「撤回同意並切回裝置端」。撤回後 EVCharge 不會再向該第三方 AI 發出新的資料請求；撤回前已傳送的資料，仍依該服務商的隱私政策與保留規則處理。未取得同意時，EVCharge 的功能會改用裝置端 AI 或 App 內建規則。</p>
 
+<h2>選用的 Tuya 智慧斷路器</h2>
+<p>如果你的充電樁裝了 Tuya（塗鴉）智慧斷路器，可以讓 EVCharge 直接讀取它的累積用電來自動帶入充電度數。<strong>這項功能預設關閉</strong>，需要你自行到 Tuya IoT Platform 建立 Cloud Project，並在「設定 → Tuya 斷路器」填入 Access ID、Access Secret 與裝置 ID 才會啟用。沒有填就完全不會連線。</p>
+<ul>
+  <li><strong>傳送對象</strong>：<strong>你自己選擇的 Tuya 資料中心</strong>（新加坡、美國、歐洲或中國）。這是<strong>境外傳輸</strong>，資料受 Tuya 的隱私政策與資料保留規則約束，與 EVCharge 開發者無關。</li>
+  <li><strong>傳送內容</strong>：你的 Access ID、裝置 ID、時間戳、隨機值、在本機算出的簽章與存取權杖。<strong>不會傳送</strong>你的車輛資料、充電記錄、開銷、筆記、照片或位置。</li>
+  <li><strong>讀回內容</strong>：該斷路器回報的資料點與累積用電數值。EVCharge <strong>只讀取，不會控制開關或改變裝置設定</strong>。</li>
+  <li><strong>Access Secret</strong>：只在這台 iPhone 上用於產生請求簽章，存放於裝置的 Keychain。<strong>不會傳送出去</strong>，也不會寫入 EVCharge 的備份檔或 iCloud 設定同步。</li>
+  <li><strong>不跨裝置</strong>：Tuya 憑證與裝置設定只留在這台 iPhone，換手機需要重新設定。</li>
+</ul>
+<p>停用方式：到「設定 → Tuya 斷路器」清空欄位即可，之後 App 不會再向 Tuya 發出任何請求。</p>
+
 <h2>其他外部連線</h2>
 <p>以下兩項與 AI 無關，即使未啟用 AI 也可能發生。兩者都不傳送任何個人資料：</p>
 <ul>
@@ -135,12 +155,12 @@
   <thead><tr><th>權限</th><th>用途</th></tr></thead>
   <tbody>
     <tr><td>相機</td><td>拍攝發票、收據、充電樁結帳畫面，以及記錄照片</td></tr>
-    <tr><td>定位</td><td>記錄充電或開銷發生的地點，僅在你主動按下取得位置時使用</td></tr>
+    <tr><td>定位</td><td>記錄充電或開銷發生的地點與地址，並用於查詢充電當下的天氣。你開啟「新增充電記錄」畫面時會自動取得一次目前位置；在開銷記錄裡則是按下取得位置時才會使用</td></tr>
     <tr><td>照片圖庫</td><td>從相簿選擇要附加到記錄的照片</td></tr>
   </tbody>
 </table>
 </div>
-<p>所有權限都只在你主動使用該功能時取用。</p>
+<p>所有權限都只在你使用相關功能時取用。若未授權定位，記錄的地點、地址與天氣欄位會留空，你仍可自行填寫，其他功能不受影響。</p>
 
 <h2>iOS 鍵盤聽寫</h2>
 <p>EVCharge 沒有內建錄音或語音辨識功能，也不會直接要求麥克風或語音辨識權限。所有語音輸入都透過 iOS 鍵盤上的聽寫功能完成；語音的收音與轉文字由 Apple／iOS 管理，EVCharge 只接收鍵盤輸入完成後的文字。</p>
